@@ -2,6 +2,7 @@ package com.JVPGOrganization.license.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,4 +17,8 @@ public class LicenseController {
 		return ResponseEntity.ok("Success");
 	}
 	
+	@PostMapping
+	public ResponseEntity<String> createLicense(@PathVariable("organizationId") String organizationId) {
+		return ResponseEntity.ok(organizationId  + "Post success");
+	}
 }
