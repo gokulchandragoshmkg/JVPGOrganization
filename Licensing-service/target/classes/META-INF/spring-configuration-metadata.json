@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "name": "example",
+      "type": "com.JVPGOrganization.license.config.ServiceConfig",
+      "sourceType": "com.JVPGOrganization.license.config.ServiceConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "example.property",
+      "type": "java.lang.String",
+      "sourceType": "com.JVPGOrganization.license.config.ServiceConfig"
+    }
+  ],
+  "hints": []
+}
