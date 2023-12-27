@@ -1,4 +1,3 @@
-# To build the code examples for Chapter 5 as a docker image, open a command-line 
 # window and execute the following command:
 $ mvn clean package dockerfile:build
 
