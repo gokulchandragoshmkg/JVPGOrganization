@@ -1,0 +1,8 @@
+spring:
+    application:
+     name: licensing-service 
+    profiles:
+      active: uat
+    cloud:
+        config: 
+            uri: http://configserver:8071

@@ -1,19 +1,20 @@
 package com.JVPGOrganization.license.controller;
 
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(value="v1/organization/{organizationId}/license")
 public class LicenseController {
 
-	@RequestMapping(value="/{licenseId}",method = RequestMethod.GET)
-	public ResponseEntity<String> getLicense( @PathVariable("organizationId") String organizationId,
-			@PathVariable("licenseId") String licenseId) {
+	@GetMapping("/{licenseId}")
+	public ResponseEntity<String> getLicense( @PathVariable String organizationId,
+            @PathVariable String licenseId) {
 		return ResponseEntity.ok("Success");
 	}
 	
+	@PostMapping
+	public ResponseEntity<String> createLicense(@PathVariable String organizationId) {
+		return ResponseEntity.ok(organizationId  + "Post success");
+	}
 }
